@@ -1,0 +1,63 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    function checkboxes()
+    {
+var firstName = document.getElementById("fName").value;
+if(firstName == "")
+{
+  window.alert("*Missing First Name")
+  document.getElementById("fName").style.backgroundColor = "red";
+  document.getElementById("fName").focus();
+  
+}
+var lastName = document.getElementById("lName").value;
+if(lastName == "")
+{
+  window.alert("*Missing Last Name")
+  document.getElementById("lName").style.backgroundColor = "red";
+  document.getElementById("lName").focus();
+}
+var Email = document.getElementById("eName").value;
+if(Email == "")
+{
+  window.alert("*Missing Email")
+  document.getElementById("eName").style.backgroundColor = "red";
+  document.getElementById("eName").focus();
+}
+var termsCheckbox = document.getElementById("terms");
+      if (!termsCheckbox.checked) {
+        window.alert("*Please accept the Terms & Conditions");
+        return;
+}
+    }
+  </script>
+</head>
+  <title>My First Page</title>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <form action="nextPage.html" type="Post">
+    First Name: <input type="text" id="fName"><br>
+    <br />
+    Last Name: <input type="text" id="lName"><br>
+    <form action="nextPage.html" type="Post">
+      <br />
+    Email: <input type="text" id="eName"><br>
+      <br />
+     <input type="checkbox" name="check" value="terms" id="terms">Accept Terms & Conditions<br>
+     <br />
+     <button id="btnSubmit" class="btn btn-primary" onclick='checkboxes();'>Submit</button>
+     <br />
+     <br />
+     <a
+    href="homepage.html"style="text-decoration:none"target="_new">Homepage</a>
+    <br />
+    <a
+    href="secondpage.html"style="text-decoration:none"target="_new">Second Page</a>
+</body>
+</html>
